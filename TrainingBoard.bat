@@ -1,0 +1,1 @@
+java -jar "D:\Program Files\Intellij\My Program\TraningBoard\target\TraningBoard-1.0-SNAPSHOT-shaded.jar"

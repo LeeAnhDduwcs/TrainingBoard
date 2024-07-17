@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.traningboard.ControlTrainingBoard">
+   <children>
+      <ListView fx:id="streakShow" layoutX="13.0" layoutY="14.0" orientation="HORIZONTAL" prefHeight="107.0" prefWidth="544.0" style="-fx-font-size: 15;" />
+      <ListView fx:id="dateList" layoutX="13.0" layoutY="127.0" onMouseClicked="#chooseDate" prefHeight="394.0" prefWidth="168.0" style="-fx-font-size: 15;" />
+      <Text fx:id="date" layoutX="204.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font name="Tahoma" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="193.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sleep">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="193.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wakeup">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="___" layoutX="196.0" layoutY="314.0" mnemonicParsing="false" text="Yes/No">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <VBox fx:id="buttonBox" layoutX="506.0" layoutY="250.0" spacing="10.0">
+         <children>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#createNew" text="New" />
+            <Button fx:id="saveWorkoutBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#saveWorkout" text="Save" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#delete" text="Delete" />
+         </children>
+      </VBox>
+      <ListView fx:id="workoutList" layoutX="399.0" layoutY="252.0" onMouseClicked="#chooseWorkout" prefHeight="95.0" prefWidth="101.0" />
+      <TextArea fx:id="inputData" layoutX="324.0" layoutY="430.0" onKeyTyped="#clear" prefHeight="37.0" prefWidth="151.0" text="16 8 16 16 8">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <ListView fx:id="DateData" layoutX="193.0" layoutY="154.0" orientation="HORIZONTAL" prefHeight="87.0" prefWidth="364.0" style="-fx-font-size: 13;" />
+      <ListView fx:id="WorkoutData" layoutX="193.0" layoutY="354.0" orientation="HORIZONTAL" prefHeight="64.0" prefWidth="364.0" style="-fx-font-size: 13;" />
+      <ComboBox fx:id="sleepHour" layoutX="248.0" layoutY="257.0" prefHeight="25.0" prefWidth="71.0" />
+      <ComboBox fx:id="sleepMinute" layoutX="319.0" layoutY="257.0" prefHeight="25.0" prefWidth="71.0" />
+      <Button fx:id="saveDateBtn" layoutX="297.0" layoutY="322.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#saveDate" prefHeight="25.0" prefWidth="58.0" text="Save" />
+      <Text layoutX="198.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="wakeupHour" layoutX="248.0" layoutY="282.0" prefHeight="25.0" prefWidth="71.0" />
+      <ComboBox fx:id="wakeupMinute" layoutX="319.0" layoutY="282.0" prefHeight="25.0" prefWidth="71.0" />
+      <ComboBox fx:id="workoutHour" layoutX="239.0" layoutY="427.0" prefHeight="25.0" prefWidth="71.0" />
+      <ComboBox fx:id="workoutMinute" layoutX="239.0" layoutY="453.0" prefHeight="25.0" prefWidth="71.0" />
+      <Button layoutX="500.0" layoutY="441.0" mnemonicParsing="false" onMouseClicked="#loadData" text="Load" />
+      <Button layoutX="223.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#setNow" text="Set Now" />
+   </children>
+</AnchorPane>
